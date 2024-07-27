@@ -32,7 +32,7 @@ a:hover{
 
 main{
     background-color: rgb(238, 242, 245);
-    min-height: 91vh;
+    min-height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,6 +52,7 @@ main{
     display: inline-block;
     background-color: rgb(9, 83, 153);
     padding: 1rem 4rem;
+    text-align: center;
     color: white;
     border-radius: 50px;
     border: 1px solid white;
@@ -82,6 +83,18 @@ main{
     align-items: center;
 }
 
+.input{
+    width: min(300px,100%);
+    margin-bottom: 30px;
+    display: none;
+}
+
+.input .javascriptCode{
+    width:100%;
+    padding: 0.5rem;
+    border: 1px solid rgb(167, 196, 223);
+}
+
 .event{
     background-color: rgb(9, 83, 153);
     text-align: center;
@@ -94,8 +107,13 @@ main{
 }
 
 @media (min-width:320px) and (max-width: 400px){
-    .container .pass{
+    .container{
+        min-height: 76vh;
        display: block;
+       text-align: center;
+    }
+    .container .pass{
+       display: none;
        max-width: 300px;
         padding: 0.5rem 2rem;
         color: white;
@@ -103,5 +121,18 @@ main{
         border: 1px solid white;
         font-size: 14px;
         text-align: center;
+    }
+
+    .input{
+        display: block;
+        margin: 0 auto;
+    }
+
+    .input p{
+        margin: 24px auto;
+        padding: 1rem;
+        background-color: rgb(9, 83, 153);
+        color: white;
+        width: 100%;
     }
 }
